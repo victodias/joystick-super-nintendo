@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-default: #e0e0e0;
+  --gray-dark: #ababab;
+  --purple-light: #b5abf9;
+  --purple-dark: #533a8d;
+  --black: #2f2f2f;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.joystick {
+  height: 180px;
+  position: relative;
+  width: 440px;
+}
+.joystick__body {
+  background-color: var(--gray-default);
+  border-radius: 20px 20px 0 0;
+  border: 1px solid gray;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 80%;
+}
+.joystick__hand__support {
+  background-color: var(--gray-default);
+  border-radius: 50%;
+  border: 1px solid gray;
+  display: grid;
+  height: 200px;
+  place-items: center;
+  position: absolute;
+  top: -2px;
+  width: 200px;
+}
+.joystick__hand__support--directionals {
+  left: -50%;
+  transform: translateX(50%);
+}
+.joystick__hand__support--actions {
+  right: -50%;
+  transform: translateX(-50%);
+}
+.action__buttons__area {
+  background-color: var(--gray-dark);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  height: 175px;
+  width: 175px;
+}
+.action__buttons__area__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(-40deg);
+}
+.action__group {
+  align-items: center;
+  display: flex;
+}
+.letter__button {
+  color: var(--gray-default);
+  font-size: 14px;
+  font-weight: bold;
+}
+.buttons__group {
+  background-color: var(--gray-default);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  padding: 5px;
+  width: 95px;
+}
+.action__button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+.top--action--buttons {
+  background-color: var(--purple-light);
+}
+.bottom--action--buttons {
+  background-color: var(--purple-dark);
+}
+.buttons--x--y {
+  margin-bottom: 8px
+}
+.buttons--a--b {
+  margin-left: 10px
+}
